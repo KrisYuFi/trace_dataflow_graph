@@ -22,8 +22,8 @@ def main():
     # Export options
     parser.add_argument(
         "--export", 
-        choices=["dot", "json", "chrome"], 
-        help="Export format (dot: Graphviz, json: serialized graph, chrome: Chrome Trace Event format)"
+        choices=["dot", "json", "chrome", "html"], 
+        help="Export format (dot: Graphviz, json: serialized graph, chrome: Chrome Trace Event format, html: interactive vis.js graph)"
     )
     parser.add_argument("--output", help="Output file path (defaults to stdout or auto-generated name)")
     
@@ -32,7 +32,7 @@ def main():
     parser.add_argument("--subgraph-tick", nargs=2, type=int, metavar=("START", "END"), help="Extract subgraph with ticks in [START, END]")
     parser.add_argument("--subgraph-symbol", help="Extract subgraph with nodes containing symbol pattern (substring match)")
     parser.add_argument("--show-waw", action="store_true", default=True, help="Show WAW dependencies (default: True)")
-    parser.add_argument("--no-waw", dest="show-waw", action="store_false", help="Hide WAW dependencies")
+    parser.add_argument("--no-waw", dest="show_waw", action="store_false", help="Hide WAW dependencies")
     
     args = parser.parse_args()
     
@@ -89,7 +89,8 @@ def main():
             ext_map = {
                 "dot": "dot",
                 "json": "json", 
-                "chrome": "json"
+                "chrome": "json",
+                "html": "html"
             }
             ext = ext_map[args.export]
             output_path = f"dataflow_graph.{ext}"
@@ -100,6 +101,8 @@ def main():
             export.export_json(graph, output_path)
         elif args.export == "chrome":
             export.export_chrome_trace(graph, output_path)
+        elif args.export == "html":
+            export.export_html(graph, output_path, show_waw=args.show_waw)
         
         print(f"Exported graph to: {output_path}")
     
