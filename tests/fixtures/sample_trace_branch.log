@@ -1,0 +1,4 @@
+100001000: board.processor.cores.core.[tid:0]: Reading integer reg integer[5] (5) as 0x0000000000000010.
+100001000: board.processor.cores.core.[tid:0]: Reading integer reg integer[6] (6) as 0x0000000000000020.
+100001000: board.processor.cores.core: 0x0000000000000200 @memset+98    : bne a5, a6, -20             : 
+150000223000: ... 0x3009e @expf+54    : fmadd_d fa3,fa5,fa2,fa4           :  D=0x4337fffffffffe98

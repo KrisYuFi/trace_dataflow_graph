@@ -1,0 +1,11 @@
+100000000: board.processor.cores.core.[tid:0]: Reading integer reg x10[10] (10) as 0x0000000000000001.
+100000000: board.processor.cores.core: 0x0000000000000000 @main    : addi a0, a0, 1           :  D=0x0000000000000002
+100000000: board.processor.cores.core.[tid:0]: Setting integer register x10[10] (10) to 0x0000000000000002.
+100000000: board.processor.cores.core.[tid:0]: Reading floating_point reg fa0[10] (10) as 0x3f800000.
+100000000: board.processor.cores.core.[tid:0]: Reading floating_point reg fa1[11] (11) as 0x40000000.
+100000000: board.processor.cores.core: 0x0000000000000100 @expf    : fadd_s fa0, fa0, fa1           :  D=0x40400000
+100000000: board.processor.cores.core.[tid:0]: Setting floating_point register fa0[10] (10) to 0x40400000.
+100000000: board.processor.cores.core.[tid:0]: Reading floating_point reg fa2[12] (12) as 0x3f000000.
+100000000: board.processor.cores.core.[tid:0]: Reading floating_point reg fa3[13] (13) as 0x3e800000.
+100000000: board.processor.cores.core: 0x0000000000000168 @expf+104    : fmul_s fa2, fa2, fa3           :  D=0x3d800000
+100000000: board.processor.cores.core.[tid:0]: Setting floating_point register fa2[12] (12) to 0x3d800000.

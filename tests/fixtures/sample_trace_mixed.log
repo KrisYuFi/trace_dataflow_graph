@@ -1,0 +1,22 @@
+100000000: board.processor.cores.core.[tid:0]: Reading integer reg x10[10] (10) as 0x0000000000000001.
+100000000: board.processor.cores.core: 0x0000000000000000 @main    : addi a0, a0, 1           :  D=0x0000000000000002
+100000000: board.processor.cores.core.[tid:0]: Setting integer register x10[10] (10) to 0x0000000000000002.
+
+100001000: board.processor.cores.core.[tid:0]: Reading integer reg x15[15] (15) as 0x0000000000001234.
+100005000: board.processor.cores.core.[tid:0]: Setting floating_point register fa5[15] (15) to 0x4140000000000000.
+100001000: board.processor.cores.core: 0x000000000000017c @expf+38    : fld fa5, 296(a5)           :  D=0x000000000000135c
+100001000: board.processor.cores.core.[tid:0]: Setting integer register x15[15] (15) to 0x000000000000135c.
+
+100002000: board.processor.cores.core.[tid:0]: Reading integer reg x18[18] (18) as 0x0000000000002000.
+100002000: board.processor.cores.core.[tid:0]: Reading floating_point reg fa0[10] (10) as 0x40400000.
+100002000: board.processor.cores.core: 0x00000000000000e0 @main+224    : fsw fa0, -4(s2)           :  D=0x0000000000001ffc
+100002000: board.processor.cores.core.[tid:0]: Setting integer register x18[18] (18) to 0x0000000000001ffc.
+100002100: board.processor.cores.core.[tid:0]: Setting memory address 0x1ffc to 0x40400000.
+
+100003000: board.processor.cores.core.[tid:0]: Reading integer reg x5[5] (5) as 0x0000000000000010.
+100003000: board.processor.cores.core.[tid:0]: Reading integer reg x6[6] (6) as 0x0000000000000020.
+100003000: board.processor.cores.core: 0x0000000000000200 @memset+98    : bne a5, a6, -20
+
+100004000: board.processor.cores.core.[tid:0]: Reading floating_point reg fa0[10] (10) as 0x40400000.
+100004000: board.processor.cores.core: 0x0000000000000180 @expf    : fmv_x_w a5, fa0           :  D=0x0000000040400000
+100004000: board.processor.cores.core.[tid:0]: Setting integer register x5[5] (5) to 0x0000000040400000.

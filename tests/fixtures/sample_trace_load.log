@@ -1,0 +1,4 @@
+100000000: board.processor.cores.core.[tid:0]: Reading integer reg x15[15] (15) as 0x0000000000001234.
+100049000: board.processor.cores.core.[tid:0]: Setting floating_point register fa5[15] (15) to 0x4140000000000000.
+100000000: board.processor.cores.core: 0x000000000000017c @expf+38    : fld fa5, 296(a5)           :  D=0x000000000000135c
+100000000: board.processor.cores.core.[tid:0]: Setting integer register x15[15] (15) to 0x000000000000135c.
